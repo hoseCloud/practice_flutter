@@ -120,7 +120,6 @@ class App extends StatelessWidget {
                   code: 'EUR',
                   amount: '6 428',
                   icon: Icons.euro,
-                  isInverted: false,
                   order: 0,
                 ),
                 const CurrencyCard(
@@ -128,7 +127,6 @@ class App extends StatelessWidget {
                   code: 'BTC',
                   amount: '9 785',
                   icon: Icons.currency_bitcoin,
-                  isInverted: true,
                   order: 1,
                 ),
                 const CurrencyCard(
@@ -136,7 +134,6 @@ class App extends StatelessWidget {
                   code: 'USD',
                   amount: '428',
                   icon: Icons.monetization_on_outlined,
-                  isInverted: false,
                   order: 2,
                 ),
               ],
