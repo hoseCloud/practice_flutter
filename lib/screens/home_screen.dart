@@ -9,7 +9,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  static const twentyFiveMinutes = 1500;
+  static const twentyFiveMinutes = 5;
   int totalSeconds = twentyFiveMinutes;
   int totalPomodoros = 0;
   bool isRunning = false;
@@ -47,6 +47,14 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  void onResetPress() {
+    timer.cancel();
+    setState(() {
+      isRunning = false;
+      totalSeconds = twentyFiveMinutes;
+    });
+  }
+
   String format(int seconds) {
     var duration = Duration(seconds: seconds);
     return duration.toString().split('.')[0].substring(2);
@@ -74,18 +82,32 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Flexible(
             flex: 6,
-            child: Container(
-              child: Center(
-                child: IconButton(
-                  color: Theme.of(context).cardColor,
-                  iconSize: 120,
-                  onPressed: isRunning ? onPausePress : onStartPress,
-                  icon: Icon(
-                    isRunning
-                        ? Icons.pause_circle_outline
-                        : Icons.play_circle_outlined,
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    color: Theme.of(context).cardColor,
+                    iconSize: 120,
+                    onPressed: isRunning ? onPausePress : onStartPress,
+                    icon: Icon(
+                      isRunning
+                          ? Icons.pause_circle_outline
+                          : Icons.play_circle_outlined,
+                    ),
                   ),
-                ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  IconButton(
+                    color: Theme.of(context).cardColor,
+                    iconSize: 60,
+                    onPressed: onResetPress,
+                    icon: const Icon(
+                      Icons.restore,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
