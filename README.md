@@ -9,3 +9,8 @@ And thanks nomad coders for providing of [this(dart)](https://nomadcoders.co/dar
 ## Writing rules
 
 This repository must will be writing in english, because i want to level-up my english skills.  
+
+## ScreenShots
+
+<img  src="/.github/screenshots/home_screen_screenshot.png" alt="home_screen_screenshot">
+<img  src="/.github/screenshots/detail_screen_screenshot.png" alt="detail_screen_screenshot">
