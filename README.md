@@ -12,5 +12,10 @@ This repository must will be writing in english, because i want to level-up my e
 
 ## ScreenShots
 
-<img  src="/.github/screenshots/home_screen_screenshot.png" alt="home_screen_screenshot">
-<img  src="/.github/screenshots/detail_screen_screenshot.png" alt="detail_screen_screenshot">
+This is a **home_screen**.  
+
+<img src="/.github/screenshots/home_screen_screenshot.png" alt="home_screen_screenshot" width=360>
+
+This is a **detail_screen**.  
+
+<img src="/.github/screenshots/detail_screen_screenshot.png" alt="detail_screen_screenshot" width=360>
